@@ -1,0 +1,41 @@
+main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+
+  #home {
+    position: relative;
+    border: 1px solid;
+    padding: 4px;
+    border-radius: 3px;
+    height: 10rem;
+    
+    .heading-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .socials-links {
+        position: relative;
+        
+        ul {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+
+          li {
+            list-style: none;
+
+            a {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
