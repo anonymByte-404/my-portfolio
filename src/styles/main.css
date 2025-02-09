@@ -15,10 +15,13 @@ body {
   font-family: sans-serif, Arial, Helvetica;
   font-size: 16px;
   line-height: 1.5;
-  background-color: #fff;
-  color: #000;
+  background-color: #0f0f0f;
+  color: #bebebe;
   width: 100vw;
   height: 100vh;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 header {
@@ -44,41 +47,150 @@ header .nav-links ul li {
 }
 header .nav-links ul li a {
   text-decoration: none;
-  color: #000;
+  color: #bebebe;
 }
 
 main {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   height: 100%;
+  margin-top: 20px;
 }
-main #home {
+main section {
+  margin-top: 20px;
+}
+main section#home {
   position: relative;
   border: 1px solid;
-  padding: 4px;
+  padding: 10px;
   border-radius: 3px;
+  width: 48rem;
   height: 10rem;
 }
-main #home .heading-wrapper {
+main section#home .heading-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-main #home .heading-wrapper .socials-links {
+main section#home .heading-wrapper .who-am-i {
   position: relative;
 }
-main #home .heading-wrapper .socials-links ul {
+main section#home .heading-wrapper .who-am-i h2 {
+  font-size: 30px;
+}
+main section#home .heading-wrapper .who-am-i .location {
+  position: relative;
+  left: 0;
+  display: flex;
+  align-items: center;
+}
+main section#home .heading-wrapper .who-am-i .location .locationIcon {
+  transition: 0.2s ease;
+}
+main section#home .heading-wrapper .who-am-i .location .locationIcon:hover {
+  fill: red;
+  transform: translateY(-5px);
+}
+main section#home .heading-wrapper .who-am-i .location .location-text {
+  display: inline-flex;
+  align-items: center;
+}
+main section#home .heading-wrapper .who-am-i .location .location-text .letter {
+  display: inline-block;
+  transition: 0.2s ease;
+}
+main section#home .heading-wrapper .who-am-i .location .location-text .letter:hover {
+  transform: translateY(-5px);
+  color: #f3eaea;
+}
+main section#home .heading-wrapper .socials-links {
+  position: relative;
+}
+main section#home .heading-wrapper .socials-links ul {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-main #home .heading-wrapper .socials-links ul li {
+main section#home .heading-wrapper .socials-links ul li {
   list-style: none;
 }
-main #home .heading-wrapper .socials-links ul li a {
+main section#home .heading-wrapper .socials-links ul li:nth-child(1) .socials {
+  transition: 0.3s ease;
+}
+main section#home .heading-wrapper .socials-links ul li:nth-child(1) .socials:hover {
+  transform: scale(1.1) rotate(10deg);
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6));
+}
+main section#home .heading-wrapper .socials-links ul li:nth-child(2) .socials {
+  transition: 0.3s ease;
+}
+main section#home .heading-wrapper .socials-links ul li:nth-child(2) .socials:hover {
+  fill: #fff;
+  transform: scale(1.1) rotate(10deg);
+  filter: drop-shadow(0 0 15px rgba(9, 139, 214, 0.6));
+}
+main section#home .heading-wrapper .socials-links ul li a {
   text-decoration: none;
+}
+main section#home .intro {
+  position: absolute;
+  bottom: 20px;
+}
+main section#project {
+  position: relative;
+  border-top: 3px solid #dedede;
+  width: 48rem;
+}
+main section#project .legend {
+  position: absolute;
+  top: -20px;
+  left: 15px;
+  background-color: #0f0f0f;
+  padding: 0 10px;
+}
+main section#project .legend h2 {
+  font-size: 2rem;
+}
+main section#project .select-style {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 3px;
+}
+main section#project .select-style button {
+  position: relative;
+  padding: 2px 5px;
+  font: normal 600 15px/1 "Arial";
+  border: none;
+  border-radius: 3px;
+  z-index: 2;
+  transition: all 0.4s ease;
+}
+main section#project .select-style button:hover {
+  box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 0.4941176471);
+  transform: translateY(-2px) scale(1.05);
+}
+main section#project p {
+  margin-top: 24px;
+}
+main section#skill {
+  position: relative;
+  border-top: 3px solid #dedede;
+  width: 48rem;
+}
+main section#skill .legend {
+  position: absolute;
+  top: -20px;
+  left: 15px;
+  background-color: #0f0f0f;
+  padding: 0 10px;
+}
+main section#skill .legend h2 {
+  font-size: 2rem;
 }/*# sourceMappingURL=main.css.map */
