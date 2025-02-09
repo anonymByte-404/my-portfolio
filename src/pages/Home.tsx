@@ -1,28 +1,52 @@
 import React from 'react'
-import { GithubIcon, FacebookIcon } from '../components/icons/SvgIcons'
+import { GithubIcon, FacebookIcon, LocationIcon } from '../components/icons/SvgIcons'
 
 export const Home: React.FC = () => {
   return (
     <section id='home'>
       <div className="introduction">
         <div className="heading-wrapper">
-          <h2>Aeron Asug</h2>
+          <div className="who-am-i">
+            <h2>Aeron Asug</h2>
+            <div className="location">
+              <LocationIcon
+                width={20}
+                height={20}
+                className="locationIcon"
+              />
+              <p className="location-text">
+                {"Sask, Canada".split("").map((letter, index) => (
+                  <span key={index} className="letter">{letter}</span>
+                ))}
+              </p>
+            </div>
+          </div>
           <nav className="socials-links">
             <ul>
               <li>
-                <a href="https://github.com/anonymByte-404" aria-label="GitHub Profile">
+                <a
+                  href="https://github.com/anonymByte-404"
+                  aria-label="GitHub Profile"
+                  target='_blank'
+                  title='Github'
+                >
                   <GithubIcon
-                    width={20}
-                    height={20}
+                    width={30}
+                    height={30}
                     className='socials'
                   />
                 </a>
               </li>
               <li>
-                <a href="#" aria-label="Facebook Profile or More Social Links">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61561597600668"
+                  aria-label="Facebook Profile or More Social Links"
+                  target='_blank'
+                  title='Facebook'
+                >
                   <FacebookIcon
-                    width={20}
-                    height={20}
+                    width={30}
+                    height={30}
                     className='socials'
                   />
                 </a>
