@@ -69,7 +69,8 @@ main section#home {
   padding: 10px;
   border-radius: 3px;
   width: 48rem;
-  height: 10rem;
+  height: 12rem;
+  box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.4588235294);
 }
 main section#home .heading-wrapper {
   display: flex;
@@ -141,6 +142,47 @@ main section#home .intro {
   position: absolute;
   bottom: 20px;
 }
+main section#home .intro a {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  text-decoration: none;
+}
+main section#home .intro a span {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5a75dd;
+  transition: color 0.3s ease-in-out;
+}
+main section#home .intro a .about-me {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+main section#home .intro a .about-me .arrow-head {
+  transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out;
+  fill: #5a75dd;
+}
+main section#home .intro a:hover span {
+  color: #869cf5;
+}
+main section#home .intro a:hover .about-me {
+  fill: #869cf5;
+}
+main section#home .intro a:hover .about-me .arrow-head {
+  animation: animate-arrow 0.9s ease-in-out infinite;
+}
+@keyframes animate-arrow {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(5px, -5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 main section#project {
   position: relative;
   border-top: 3px solid #dedede;
@@ -170,6 +212,7 @@ main section#project .select-style button {
   border: none;
   border-radius: 3px;
   z-index: 2;
+  cursor: pointer;
   transition: all 0.4s ease;
 }
 main section#project .select-style button:hover {
