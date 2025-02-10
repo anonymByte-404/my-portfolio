@@ -12,6 +12,35 @@ export const Project: React.FC = () => {
         <button>Default</button>
         <button>SlideShow</button>
       </div>
+      <div className="project-container">
+        <div className="project">
+          <div className="project-preview-image">
+
+          </div>
+          <div className="project-detail">
+            <h3>Project</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In omnis, eveniet provident animi, aliquam voluptatem quaerat quae perferendis reiciendis doloremque aspernatur ipsam deleniti repellat placeat. Fugiat harum aut nihil dolores.</p>
+          </div>
+        </div>
+        <div className="project">
+          <div className="project-preview-image">
+
+          </div>
+          <div className="project-detail">
+            <h3>Project</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In omnis, eveniet provident animi, aliquam voluptatem quaerat quae perferendis reiciendis doloremque aspernatur ipsam deleniti repellat placeat. Fugiat harum aut nihil dolores.</p>
+          </div>
+        </div>
+        <div className="project">
+          <div className="project-preview-image">
+
+          </div>
+          <div className="project-detail">
+            <h3>Project</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In omnis, eveniet provident animi, aliquam voluptatem quaerat quae perferendis reiciendis doloremque aspernatur ipsam deleniti repellat placeat. Fugiat harum aut nihil dolores.</p>
+          </div>
+        </div>
+      </div>
     </section>
   )
 }
