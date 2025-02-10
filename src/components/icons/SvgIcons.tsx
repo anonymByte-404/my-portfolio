@@ -75,3 +75,25 @@ export const LocationIcon: React.FC<IconProps> = ({ width = 24, height = 24, cla
       stroke="#bebebe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
   </svg>
 )
+
+export const ArrowIcon: React.FC<IconProps> = ({ width = 24, height = 24, className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="-5 -5 26 26"
+      width={width}
+      height={height}
+      className={className}
+    >
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+      <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+      <g id="SVGRepo_iconCarrier">
+        <path
+          className='arrow-head'
+          d="M10 0L9 1L11.2929 3.29289L6.2929 8.29289L7.70711 9.70711L12.7071 4.7071L15 7L16 6V0H10Z" fill="#5a75dd">
+        </path>
+        <path d="M1 2H6V4H3V13H12V10H14V15H1V2Z" fill="#5a75dd"></path>
+      </g>
+    </svg>
+  )
+}
