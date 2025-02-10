@@ -1,5 +1,5 @@
 import React from 'react'
-import { GithubIcon, FacebookIcon, LocationIcon } from '../components/icons/SvgIcons'
+import { GithubIcon, FacebookIcon, LocationIcon, ArrowIcon } from '../components/icons/SvgIcons'
 
 export const Home: React.FC = () => {
   return (
@@ -28,6 +28,7 @@ export const Home: React.FC = () => {
                   href="https://github.com/anonymByte-404"
                   aria-label="GitHub Profile"
                   target='_blank'
+                  rel='noreferrer'
                   title='Github'
                 >
                   <GithubIcon
@@ -42,6 +43,7 @@ export const Home: React.FC = () => {
                   href="https://www.facebook.com/profile.php?id=61561597600668"
                   aria-label="Facebook Profile or More Social Links"
                   target='_blank'
+                  rel='noreferrer'
                   title='Facebook'
                 >
                   <FacebookIcon
@@ -59,6 +61,17 @@ export const Home: React.FC = () => {
             I'm a 15-year-old Front-End Developer who just started programming a few months ago. I'm currently balancing
             my passion for coding with school and personal projects.
           </p>
+          <a
+            href="#"
+            title='About Me'
+          >
+            <span>Learn More</span>
+            <ArrowIcon
+              width={18}
+              height={18}
+              className='about-me'
+            />
+          </a>
         </div>
       </div>
     </section>
