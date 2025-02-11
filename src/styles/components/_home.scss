@@ -108,11 +108,16 @@ main {
         position: absolute;
         bottom: 20px;
 
+        .key-terms {
+          color: #c7b370;
+        }
+
         a {
           display: flex;
           align-items: center;
           gap: 2px;
           text-decoration: none;
+          width: fit-content;
         
           span {
             font-size: 16px;
