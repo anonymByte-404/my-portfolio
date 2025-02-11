@@ -58,7 +58,7 @@ export const Home: React.FC = () => {
         </div>
         <div className="intro">
           <p>
-            I'm a 15-year-old Front-End Developer who just started programming a few months ago. I'm currently balancing
+            I'm a 15-year-old <span className='key-terms'>Front-End Developer</span> who just started programming a few months ago. I'm currently balancing
             my passion for coding with school and personal projects.
           </p>
           <a
