@@ -15,7 +15,9 @@ const Projects: React.FC<ProjectProps> = ({ title, description, image, tags = []
         {image && <img src={image} alt={title} />}
       </div>
       <div className="project-detail">
-        <h3>{title}</h3>
+        <div className="project-title">
+          <h3>{title}</h3>
+        </div>
         <p>{description}</p>
         <div className="tags">
           {tags.map((tag, index) => (
