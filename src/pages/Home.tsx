@@ -1,13 +1,19 @@
 import React from 'react'
+import { useState } from 'react'
 import { GithubIcon, FacebookIcon, LocationIcon, ArrowIcon } from '../components/icons/SvgIcons'
 
 export const Home: React.FC = () => {
+  const [fbColor, setFbColor] = useState('#bebebe')
+  const [ghColor, setGhColor] = useState('#bebebe')
+
   return (
     <section id='home'>
       <div className="introduction">
         <div className="heading-wrapper">
           <div className="who-am-i">
-            <h2>Aeron Asug</h2>
+            <h2>
+              Aeron Asug<span className='wave'>👋</span>
+            </h2>
             <div className="location">
               <LocationIcon
                 width={20}
@@ -23,33 +29,43 @@ export const Home: React.FC = () => {
           </div>
           <nav className="socials-links">
             <ul>
-              <li>
+              <li
+                onMouseEnter={() => setGhColor('#fff')}
+                onMouseLeave={() => setGhColor('#bebebe')}
+              >
                 <a
                   href="https://github.com/anonymByte-404"
                   aria-label="GitHub Profile"
-                  target='_blank'
-                  rel='noreferrer'
-                  title='Github'
+                  target="_blank"
+                  rel="noreferrer"
+                  title="Github"
+                  data-title='anonmyByte-404'
                 >
                   <GithubIcon
-                    width={30}
-                    height={30}
+                    width={25}
+                    height={25}
                     className='socials'
+                    color={ghColor}
                   />
                 </a>
               </li>
-              <li>
+              <li
+                onMouseEnter={() => setFbColor('rgb(9, 139, 214)')}
+                onMouseLeave={() => setFbColor('#bebebe')}
+              >
                 <a
                   href="https://www.facebook.com/profile.php?id=61561597600668"
                   aria-label="Facebook Profile or More Social Links"
-                  target='_blank'
-                  rel='noreferrer'
-                  title='Facebook'
+                  target="_blank"
+                  rel="noreferrer"
+                  title="Facebook"
+                  data-title='Aeron Asug'
                 >
                   <FacebookIcon
-                    width={30}
-                    height={30}
+                    width={25}
+                    height={25}
                     className='socials'
+                    color={fbColor}
                   />
                 </a>
               </li>
