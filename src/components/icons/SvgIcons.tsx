@@ -7,9 +7,7 @@ interface IconProps {
   className?: string
 }
 
-export const GithubIcon: React.FC<IconProps> = ({ width = 24, height = 24, className }) => {
-  const [color, setColor] = useState('#bebebe')
-
+export const GithubIcon: React.FC<IconProps & { color: string }> = ({ width = 24, height = 24, className, color }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,8 +15,6 @@ export const GithubIcon: React.FC<IconProps> = ({ width = 24, height = 24, class
       width={width}
       height={height}
       className={className}
-      onMouseEnter={() => setColor('#fff')}
-      onMouseLeave={() => setColor('#bebebe')}
     >
       <path
         fillRule="evenodd"
@@ -30,9 +26,7 @@ export const GithubIcon: React.FC<IconProps> = ({ width = 24, height = 24, class
   )
 }
 
-export const FacebookIcon: React.FC<IconProps> = ({ width = 24, height = 24, className }) => {
-  const [color, setColor] = useState('#bebebe')
-
+export const FacebookIcon: React.FC<IconProps & { color: string }> = ({ width = 24, height = 24, className, color }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -40,8 +34,6 @@ export const FacebookIcon: React.FC<IconProps> = ({ width = 24, height = 24, cla
       width={width}
       height={height}
       className={className}
-      onMouseEnter={() => setColor('rgb(9, 139, 214)')}
-      onMouseLeave={() => setColor('#bebebe')}
     >
       <rect
         fill={color}
@@ -58,6 +50,7 @@ export const FacebookIcon: React.FC<IconProps> = ({ width = 24, height = 24, cla
     </svg>
   )
 }
+
 
 export const LocationIcon: React.FC<IconProps> = ({ width = 24, height = 24, className }) => (
   <svg
