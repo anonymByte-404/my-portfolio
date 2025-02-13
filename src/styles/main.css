@@ -189,6 +189,37 @@ main section#home .heading-wrapper .who-am-i {
 main section#home .heading-wrapper .who-am-i h2 {
   font-size: 30px;
 }
+main section#home .heading-wrapper .who-am-i h2 .wave {
+  display: inline-block;
+  animation: waving 2.5s infinite;
+  transform-origin: 70% 70%;
+}
+@keyframes waving {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 main section#home .heading-wrapper .who-am-i .location {
   position: relative;
   left: 0;
@@ -226,23 +257,83 @@ main section#home .heading-wrapper .socials-links ul {
 main section#home .heading-wrapper .socials-links ul li {
   list-style: none;
 }
-main section#home .heading-wrapper .socials-links ul li:nth-child(1) .socials {
-  transition: 0.3s ease;
+main section#home .heading-wrapper .socials-links ul li:nth-child(1) a {
+  transform: scale(1.02);
 }
-main section#home .heading-wrapper .socials-links ul li:nth-child(1) .socials:hover {
-  transform: scale(1.1) rotate(10deg);
-  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6));
+main section#home .heading-wrapper .socials-links ul li:nth-child(1) a:hover {
+  background-color: #242424;
 }
-main section#home .heading-wrapper .socials-links ul li:nth-child(2) .socials {
-  transition: 0.3s ease;
+main section#home .heading-wrapper .socials-links ul li:nth-child(1) a:hover::before {
+  opacity: 1;
+  transform: translateY(-44px);
+  background-color: #fff;
+  color: #000;
 }
-main section#home .heading-wrapper .socials-links ul li:nth-child(2) .socials:hover {
-  fill: #fff;
-  transform: scale(1.1) rotate(10deg);
-  filter: drop-shadow(0 0 15px rgba(9, 139, 214, 0.6));
+main section#home .heading-wrapper .socials-links ul li:nth-child(1) a:hover::after {
+  border-top: 7px solid #fff;
+  transform: translateY(-25px);
+}
+main section#home .heading-wrapper .socials-links ul li:nth-child(2) a {
+  transform: scale(1.02);
+}
+main section#home .heading-wrapper .socials-links ul li:nth-child(2) a:hover {
+  background-color: #404869;
+}
+main section#home .heading-wrapper .socials-links ul li:nth-child(2) a:hover .socials {
+  fill: white;
+}
+main section#home .heading-wrapper .socials-links ul li:nth-child(2) a:hover::before {
+  opacity: 1;
+  transform: translateY(-44px);
+  background-color: #5a75dd;
+}
+main section#home .heading-wrapper .socials-links ul li:nth-child(2) a:hover::after {
+  border-top: 7px solid #fff;
+  transform: translateY(-25px);
 }
 main section#home .heading-wrapper .socials-links ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+  width: 38px;
+  height: 38px;
+  border-radius: 5px;
   text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+main section#home .heading-wrapper .socials-links ul li a::before {
+  content: attr(data-title);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 2rem;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 1px 5px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+main section#home .heading-wrapper .socials-links ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-top: 7px solid transparent;
+  transition: 0.3s ease;
+  pointer-events: none;
 }
 main section#home .intro {
   position: absolute;
@@ -384,7 +475,7 @@ main section#project .select-style button:hover .arrow {
   animation: arrow-animation 1s ease-in-out infinite;
 }
 main section#project .select-style button:active {
-  transform: scale(0.9);
+  transform: scale(0.95);
 }
 @keyframes arrow-animation {
   0% {
@@ -430,6 +521,7 @@ main section#project .project-container .project .project-preview-image {
   height: 49%;
   background-color: rgb(204, 203, 203);
   border-radius: 10px 10px 0 0;
+  overflow: hidden;
 }
 main section#project .project-container .project .project-detail {
   position: relative;
@@ -454,4 +546,7 @@ main section#skill .legend {
 }
 main section#skill .legend h2 {
   font-size: 2rem;
+}
+main section#skill p {
+  margin-top: 25px;
 }/*# sourceMappingURL=main.css.map */
