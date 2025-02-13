@@ -6,6 +6,7 @@ export const Skill: React.FC = () => {
       <div className="legend">
         <h2>What I Work With</h2>
       </div>
+      <p>Here are the programming languages, frameworks, and tools I use to build my projects.</p>
     </section>
   )
 }
