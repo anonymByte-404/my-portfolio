@@ -410,7 +410,30 @@ main {
           padding: 4px 5px;
           box-shadow: inset 0 -8px 10px 0 #cac9c96c;
           z-index: 1;
+          overflow: hidden;
           transition: 0.3s ease-in;
+
+          &::before {
+            content: 'Recent';
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+            color: #fff;
+            width: 14rem;
+            height: 2rem;
+            transform: translate(48px, 20px) rotate(30deg);
+            font: normal 600 1.2rem/1 "Arial";
+            border: 1px dotted #fff;
+            box-shadow:
+              inset 0 0 4px 0 #000,
+              0 0 3px 0 #000
+            ;
+            z-index: 1;
+          }
 
           &:hover {
             transform: scale(1.025);
@@ -422,6 +445,7 @@ main {
             height: 49%;
             background-color: rgb(204, 203, 203);
             border-radius: 10px 10px 0 0;
+            border: 1px solid #fff;
             overflow: hidden;
           }
 
