@@ -159,20 +159,7 @@ header .nav-links ul li a button span:hover::after {
   }
 }
 
-main {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  margin-top: 20px;
-}
-main section {
-  margin-top: 20px;
-}
-main section#home {
+#home {
   position: relative;
   border: 1px solid;
   padding: 10px;
@@ -181,18 +168,18 @@ main section#home {
   height: 12rem;
   box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.4588235294);
 }
-main section#home .heading-wrapper {
+#home .heading-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-main section#home .heading-wrapper .who-am-i {
+#home .heading-wrapper .who-am-i {
   position: relative;
 }
-main section#home .heading-wrapper .who-am-i h2 {
+#home .heading-wrapper .who-am-i h2 {
   font-size: 30px;
 }
-main section#home .heading-wrapper .who-am-i h2 .wave {
+#home .heading-wrapper .who-am-i h2 .wave {
   display: inline-block;
   animation: waving 2.5s infinite;
   transform-origin: 70% 70%;
@@ -223,78 +210,78 @@ main section#home .heading-wrapper .who-am-i h2 .wave {
     transform: rotate(0deg);
   }
 }
-main section#home .heading-wrapper .who-am-i .location {
+#home .heading-wrapper .who-am-i .location {
   position: relative;
   left: 0;
   display: flex;
   align-items: center;
 }
-main section#home .heading-wrapper .who-am-i .location .locationIcon {
+#home .heading-wrapper .who-am-i .location .locationIcon {
   transition: 0.2s ease;
 }
-main section#home .heading-wrapper .who-am-i .location .locationIcon:hover {
+#home .heading-wrapper .who-am-i .location .locationIcon:hover {
   fill: red;
   transform: translateY(-5px);
 }
-main section#home .heading-wrapper .who-am-i .location .location-text {
+#home .heading-wrapper .who-am-i .location .location-text {
   display: inline-flex;
   align-items: center;
 }
-main section#home .heading-wrapper .who-am-i .location .location-text .letter {
+#home .heading-wrapper .who-am-i .location .location-text .letter {
   display: inline-block;
   transition: 0.2s ease;
 }
-main section#home .heading-wrapper .who-am-i .location .location-text .letter:hover {
+#home .heading-wrapper .who-am-i .location .location-text .letter:hover {
   transform: translateY(-5px);
   color: #f3eaea;
 }
-main section#home .heading-wrapper .socials-links {
+#home .heading-wrapper .socials-links {
   position: relative;
 }
-main section#home .heading-wrapper .socials-links ul {
+#home .heading-wrapper .socials-links ul {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-main section#home .heading-wrapper .socials-links ul li {
+#home .heading-wrapper .socials-links ul li {
   list-style: none;
 }
-main section#home .heading-wrapper .socials-links ul li:nth-child(1) a {
+#home .heading-wrapper .socials-links ul li:nth-child(1) a {
   transform: scale(1.02);
 }
-main section#home .heading-wrapper .socials-links ul li:nth-child(1) a:hover {
+#home .heading-wrapper .socials-links ul li:nth-child(1) a:hover {
   background-color: #242424;
 }
-main section#home .heading-wrapper .socials-links ul li:nth-child(1) a:hover::before {
+#home .heading-wrapper .socials-links ul li:nth-child(1) a:hover::before {
   opacity: 1;
   transform: translateY(-44px);
   background-color: #fff;
   color: #000;
 }
-main section#home .heading-wrapper .socials-links ul li:nth-child(1) a:hover::after {
+#home .heading-wrapper .socials-links ul li:nth-child(1) a:hover::after {
   border-top: 7px solid #fff;
   transform: translateY(-25px);
 }
-main section#home .heading-wrapper .socials-links ul li:nth-child(2) a {
+#home .heading-wrapper .socials-links ul li:nth-child(2) a {
   transform: scale(1.02);
 }
-main section#home .heading-wrapper .socials-links ul li:nth-child(2) a:hover {
+#home .heading-wrapper .socials-links ul li:nth-child(2) a:hover {
   background-color: #404869;
 }
-main section#home .heading-wrapper .socials-links ul li:nth-child(2) a:hover .socials {
+#home .heading-wrapper .socials-links ul li:nth-child(2) a:hover .socials {
   fill: white;
 }
-main section#home .heading-wrapper .socials-links ul li:nth-child(2) a:hover::before {
+#home .heading-wrapper .socials-links ul li:nth-child(2) a:hover::before {
   opacity: 1;
   transform: translateY(-44px);
   background-color: #5a75dd;
 }
-main section#home .heading-wrapper .socials-links ul li:nth-child(2) a:hover::after {
+#home .heading-wrapper .socials-links ul li:nth-child(2) a:hover::after {
   border-top: 7px solid #fff;
   transform: translateY(-25px);
 }
-main section#home .heading-wrapper .socials-links ul li a {
+#home .heading-wrapper .socials-links ul li a {
   position: relative;
   display: flex;
   justify-content: center;
@@ -306,7 +293,7 @@ main section#home .heading-wrapper .socials-links ul li a {
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
-main section#home .heading-wrapper .socials-links ul li a::before {
+#home .heading-wrapper .socials-links ul li a::before {
   content: attr(data-title);
   position: absolute;
   display: flex;
@@ -327,7 +314,7 @@ main section#home .heading-wrapper .socials-links ul li a::before {
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
 }
-main section#home .heading-wrapper .socials-links ul li a::after {
+#home .heading-wrapper .socials-links ul li a::after {
   content: "";
   position: absolute;
   width: 0;
@@ -338,14 +325,14 @@ main section#home .heading-wrapper .socials-links ul li a::after {
   transition: 0.3s ease;
   pointer-events: none;
 }
-main section#home .intro {
+#home .intro {
   position: absolute;
   bottom: 20px;
 }
-main section#home .intro .key-terms {
+#home .intro .key-terms {
   color: #c7b370;
 }
-main section#home .intro a {
+#home .intro a {
   display: flex;
   align-items: center;
   gap: 2px;
@@ -353,28 +340,28 @@ main section#home .intro a {
   width: -moz-fit-content;
   width: fit-content;
 }
-main section#home .intro a span {
+#home .intro a span {
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   color: #5a75dd;
   transition: color 0.3s ease-in-out;
 }
-main section#home .intro a .about-me {
+#home .intro a .about-me {
   display: flex;
   align-items: center;
   gap: 5px;
 }
-main section#home .intro a .about-me .arrow-head {
+#home .intro a .about-me .arrow-head {
   transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out;
   fill: #5a75dd;
 }
-main section#home .intro a:hover span {
+#home .intro a:hover span {
   color: #869cf5;
 }
-main section#home .intro a:hover .about-me {
+#home .intro a:hover .about-me {
   fill: #869cf5;
 }
-main section#home .intro a:hover .about-me .arrow-head {
+#home .intro a:hover .about-me .arrow-head {
   animation: animate-arrow 0.9s ease-in-out infinite;
 }
 @keyframes animate-arrow {
@@ -388,29 +375,30 @@ main section#home .intro a:hover .about-me .arrow-head {
     transform: translate(0, 0);
   }
 }
-main section#project {
+
+#project {
   position: relative;
   border-top: 3px solid #dedede;
   width: 48rem;
 }
-main section#project .legend {
+#project .legend {
   position: absolute;
   top: -20px;
   left: 15px;
   background-color: #0f0f0f;
   padding: 0 10px;
 }
-main section#project .legend h2 {
+#project .legend h2 {
   font-size: 2rem;
 }
-main section#project .select-style {
+#project .select-style {
   position: relative;
   display: flex;
   align-items: center;
   gap: 7px;
   margin-top: 5px;
 }
-main section#project .select-style button {
+#project .select-style button {
   position: relative;
   display: flex;
   justify-content: center;
@@ -429,12 +417,12 @@ main section#project .select-style button {
   text-rendering: optimizeLegibility;
   height: 2rem;
 }
-main section#project .select-style button .arrow {
+#project .select-style button .arrow {
   transition: 0.3s ease-in;
   will-change: transform;
   backface-visibility: hidden;
 }
-main section#project .select-style button::before {
+#project .select-style button::before {
   content: "";
   position: absolute;
   width: 100px;
@@ -455,29 +443,29 @@ main section#project .select-style button::before {
     left: 100%;
   }
 }
-main section#project .select-style button:nth-child(1) {
+#project .select-style button:nth-child(1) {
   background-color: rgb(68, 68, 216);
   color: rgb(255, 255, 255);
   border: 2px solid rgb(65, 102, 235);
 }
-main section#project .select-style button:nth-child(2) {
+#project .select-style button:nth-child(2) {
   background-color: rgb(169, 72, 189);
   color: rgb(254, 251, 255);
   border: 2px solid rgb(202, 22, 238);
 }
-main section#project .select-style button:hover {
+#project .select-style button:hover {
   transform: scale(1.03);
   letter-spacing: 1.05px;
   filter: brightness(100%);
   color: #fff;
 }
-main section#project .select-style button:hover::before {
+#project .select-style button:hover::before {
   animation: shine 1.5s ease-out infinite;
 }
-main section#project .select-style button:hover .arrow {
+#project .select-style button:hover .arrow {
   animation: arrow-animation 1s ease-in-out infinite;
 }
-main section#project .select-style button:active {
+#project .select-style button:active {
   transform: scale(0.95);
 }
 @keyframes arrow-animation {
@@ -491,7 +479,7 @@ main section#project .select-style button:active {
     transform: translate3d(0, 0, 0);
   }
 }
-main section#project .project-container {
+#project .project-container {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -500,7 +488,7 @@ main section#project .project-container {
   gap: 15px;
   margin: 12px 0;
 }
-main section#project .project-container .project {
+#project .project-container .project {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -516,7 +504,7 @@ main section#project .project-container .project {
   overflow: hidden;
   transition: 0.3s ease-in;
 }
-main section#project .project-container .project::before {
+#project .project-container .project::before {
   content: "Recent";
   position: absolute;
   top: 0;
@@ -534,10 +522,10 @@ main section#project .project-container .project::before {
   box-shadow: inset 0 0 4px 0 #000, 0 0 3px 0 #000;
   z-index: 1;
 }
-main section#project .project-container .project:hover {
+#project .project-container .project:hover {
   transform: scale(1.025);
 }
-main section#project .project-container .project .project-preview-image {
+#project .project-container .project .project-preview-image {
   position: relative;
   width: 99%;
   height: 49%;
@@ -546,30 +534,45 @@ main section#project .project-container .project .project-preview-image {
   border: 1px solid #fff;
   overflow: hidden;
 }
-main section#project .project-container .project .project-detail {
+#project .project-container .project .project-detail {
   position: relative;
   width: 100%;
   height: 49%;
   padding: 2px 4px;
 }
-main section#project p {
+#project p {
   margin-top: 24px;
 }
-main section#skill {
+
+#skill {
   position: relative;
   border-top: 3px solid #dedede;
   width: 48rem;
 }
-main section#skill .legend {
+#skill .legend {
   position: absolute;
   top: -20px;
   left: 15px;
   background-color: #0f0f0f;
   padding: 0 10px;
 }
-main section#skill .legend h2 {
+#skill .legend h2 {
   font-size: 2rem;
 }
-main section#skill p {
+#skill p {
   margin-top: 25px;
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+}
+main section {
+  margin-top: 20px;
 }/*# sourceMappingURL=main.css.map */
