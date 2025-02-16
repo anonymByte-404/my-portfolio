@@ -1,4 +1,5 @@
 import React from 'react'
+import { JavaScriptIcon, TypeScriptIcon, PythonIcon, CPlusPlusIcon, ReactIcon, ExpressIcon, GitIcon, VsCodeIcon } from './icons/SvgIcons'
 
 type Skill = {
   icon: React.ReactNode
@@ -37,25 +38,88 @@ export const Skill: React.FC = () => {
         <SkillCategory
           title="Programming Languages"
           skills={[
-            { icon: <span>[ICON]</span>, name: 'JavaScript' },
-            { icon: <span>[ICON]</span>, name: 'TypeScript' },
-            { icon: <span>[ICON]</span>, name: 'Python' }
+            {
+              icon:
+                <JavaScriptIcon
+                  width={20}
+                  height={20}
+                  className='icon'
+                />,
+              name: ' JavaScript'
+            },
+            {
+              icon:
+                <TypeScriptIcon
+                  width={20}
+                  height={20}
+                  className='icon'
+                />,
+              name: 'TypeScript'
+            },
+            {
+              icon:
+                <PythonIcon
+                  width={20}
+                  height={20}
+                  className='icon'
+                />,
+              name: 'Python'
+            },
+            {
+              icon:
+                <CPlusPlusIcon
+                  width={20}
+                  height={20}
+                  className='icon'
+                />,
+              name: 'C++'
+            }
           ]}
         />
         <SkillCategory
           title="Frameworks & Libraries"
           skills={[
-            { icon: <span>[ICON]</span>, name: 'React' },
-            { icon: <span>[ICON]</span>, name: 'Next.js' },
-            { icon: <span>[ICON]</span>, name: 'Express' }
+            {
+              icon:
+                <ReactIcon
+                  width={20}
+                  height={20}
+                  className='icon'
+                />,
+              name: 'React'
+            },
+            {
+              icon:
+                <ExpressIcon
+                  width={20}
+                  height={20}
+                  className='icon'
+                />,
+              name: 'Express'
+            }
           ]}
         />
         <SkillCategory
           title="Tools"
           skills={[
-            { icon: <span>[ICON]</span>, name: 'Git & GitHub' },
-            { icon: <span>[ICON]</span>, name: 'VS Code' },
-            { icon: <span>[ICON]</span>, name: 'Linux' }
+            {
+              icon:
+                <GitIcon
+                  width={20}
+                  height={20}
+                  className='icon'
+                />,
+              name: 'Git'
+            },
+            {
+              icon:
+                <VsCodeIcon
+                  width={20}
+                  height={20}
+                  className='icon'
+                />,
+              name: 'VS Code'
+            },
           ]}
         />
       </div>
