@@ -1,5 +1,5 @@
 import React from 'react'
-import { JavaScriptIcon, TypeScriptIcon, PythonIcon, CPlusPlusIcon, ReactIcon, ExpressIcon, GitIcon, VsCodeIcon } from './icons/SvgIcons'
+import { JavaScriptIcon, TypeScriptIcon, PythonIcon, CPlusPlusIcon, ReactIcon, NodeJSIcon2, GitIcon, VsCodeIcon, VisualStudioIcon } from './icons/SvgIcons'
 
 type Skill = {
   icon: React.ReactNode
@@ -90,7 +90,7 @@ export const Skill: React.FC = () => {
             },
             {
               icon:
-                <ExpressIcon
+                <NodeJSIcon2
                   width={20}
                   height={20}
                   className='icon'
@@ -120,6 +120,15 @@ export const Skill: React.FC = () => {
                 />,
               name: 'VS Code'
             },
+            {
+              icon:
+                <VisualStudioIcon
+                  width={20}
+                  height={20}
+                  className='icon'
+                />,
+              name: 'Visual Studio'
+            }
           ]}
         />
       </div>
