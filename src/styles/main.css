@@ -597,7 +597,8 @@ header .nav-links ul li a button span:hover::after {
   z-index: 1;
 }
 #project .project-container .project:hover {
-  transform: scale(1.025);
+  transform: translateY(-5px);
+  box-shadow: inset 0 -8px 10px 0 rgba(202, 201, 201, 0.4235294118), 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 #project .project-container .project .project-preview-image {
   position: relative;
