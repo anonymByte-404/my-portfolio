@@ -1,96 +1,200 @@
 /* ===================
-   Home Section Styles
-   =================== */
+  Home Section Styles
+  =================== */
 
-   .home {
-    background-color: #f4f4f4; /* Example background */
-    padding: 50px 0; /* Add padding to top and bottom */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.home {
+  background-color: #f4f4f4; /* Example background */
+  padding: 50px 0; /* Add padding to top and bottom */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .hero-content {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
     
-    .hero-content {
+    h1 {
+      font-size: 2.5rem;
+      line-height: 1.4;
+      font-weight: 700;
+      margin-bottom: 20px;
+      
+      span {
+        color: #3d5a98; /* Highlight color */
+        font-weight: 600;
+      }
+    }
+    
+    p {
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      .btn-primary,
+      .btn-secondary {
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+      .btn-primary {
+        background-color: #3d5a98;
+        color: #fff;
+        
+        &:hover {
+          background-color: #2a457a;
+        }
+      }
+
+      .btn-secondary {
+        background-color: #ccc;
+        color: #333;
+
+        &:hover {
+          background-color: #bbb;
+        }
+      }
+    }
+  }
+}
+
+/* ===================
+  Modal Styles
+  =================== */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  .modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    animation: slideIn 0.3s ease;
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+
+      .icon-socials {
+        margin: 0 10px;
+        cursor: pointer;
+        transition: transform 0.2s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .mail-btn {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+
+      button {
+        flex: 1;
+        margin: 0 5px;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+
+    span {
+      display: block;
+      margin: 15px 0;
       text-align: center;
-      max-width: 800px;
-      width: 100%;
-      
-      h1 {
-        font-size: 2.5rem;
-        line-height: 1.4;
-        font-weight: 700;
-        margin-bottom: 20px;
-        
-        span {
-          color: #3d5a98; /* Highlight color */
-          font-weight: 600;
-        }
-      }
-      
-      p {
-        font-size: 1.2rem;
-        color: #666;
-        margin-bottom: 40px;
-      }
-  
-      .cta-buttons {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .message {
+      form {
         display: flex;
-        justify-content: center;
-        gap: 20px;
-  
-        .btn-primary,
-        .btn-secondary {
-          padding: 10px 20px;
-          font-size: 1rem;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-        }
-        
-        .btn-primary {
-          background-color: #3d5a98;
-          color: #fff;
-          
-          &:hover {
-            background-color: #2a457a;
+        flex-direction: column;
+
+        div {
+          margin-bottom: 15px;
+
+          input,
+          textarea {
+            resize: none;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s ease;
+
+            &:focus {
+              border-color: #007bff;
+              outline: none;
+            }
+          }
+
+          label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #555;
           }
         }
-  
-        .btn-secondary {
-          background-color: #ccc;
-          color: #333;
-  
+
+        button[type='submit'] {
+          background-color: #28a745;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          padding: 10px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
           &:hover {
-            background-color: #bbb;
+            background-color: #218838;
           }
         }
       }
     }
   }
-  
-  /* ===================
-     Modal Styles (if applicable)
-     =================== */
-  
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modal-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    position: relative;
-    width: 80%;
-    max-width: 500px;
-  }
-  
+}
