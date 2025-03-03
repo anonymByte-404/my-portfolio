@@ -1,11 +1,12 @@
 import React from 'react'
-import { Header, Home } from './ui'
+import { Header, Home, About } from './ui'
 
 const App: React.FC = () => {
   return (
     <>
       <Header />
       <Home />
+      <About />
     </>
   )
 }
