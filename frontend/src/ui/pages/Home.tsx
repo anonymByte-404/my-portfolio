@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { FacebookIcon } from '../components/Icons'
 
-
 const Modal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const [email, setEmail] = useState('')
   const [messageContent, setMessageContent] = useState('')
@@ -17,13 +16,13 @@ const Modal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     <div className='modal-overlay' onClick={onClose}>
       <div className='modal-content' onClick={(e) => e.stopPropagation()}>
         <div className='socials'>
-          <FacebookIcon
-            width={25}
-            height={25}
-            className='icon-socials'
+          <FacebookIcon 
+            width={25} 
+            height={25} 
+            className='icon-socials' 
           />
         </div>
-        <div className='mail'>
+        <div className='mail-btn'>
           <button>example@fake.com</button>
           <button>Book a call</button>
         </div>
@@ -37,9 +36,9 @@ const Modal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                 id='email'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                placeholder='Email'
                 required
               />
-              <label htmlFor='email'>Email</label>
             </div>
             <div>
               <textarea
@@ -47,9 +46,9 @@ const Modal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                 id='message-content'
                 value={messageContent}
                 onChange={(e) => setMessageContent(e.target.value)}
+                placeholder='Message'
                 required
               />
-              <label htmlFor='message-content'>Message</label>
             </div>
             <button type='submit'>Send Message</button>
           </form>
@@ -62,8 +61,15 @@ const Modal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 const Home: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
-  const openModal = () => setIsModalOpen(true)
-  const closeModal = () => setIsModalOpen(false)
+  const openModal = () => {
+    console.log('Opening modal')
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    console.log('Closing modal')
+    setIsModalOpen(false)
+  }
 
   return (
     <section id='home' className='home'>
