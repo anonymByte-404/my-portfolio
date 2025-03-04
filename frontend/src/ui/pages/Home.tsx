@@ -16,10 +16,10 @@ const Modal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     <div className='modal-overlay' onClick={onClose}>
       <div className='modal-content' onClick={(e) => e.stopPropagation()}>
         <div className='socials'>
-          <FacebookIcon 
-            width={25} 
-            height={25} 
-            className='icon-socials' 
+          <FacebookIcon
+            width={25}
+            height={25}
+            className='icon-socials'
           />
         </div>
         <div className='mail-btn'>
@@ -73,7 +73,7 @@ const Home: React.FC = () => {
 
   return (
     <section id='home' className='home'>
-      <div className="hero-content">
+      <div className='hero-content'>
         <h1>I turn my ideas into reality<br />by creating <span>innovative and useful tools</span></h1>
         <p>Hello, I'm Aeron, a Frontend Developer</p>
         <div className='cta-buttons'>
