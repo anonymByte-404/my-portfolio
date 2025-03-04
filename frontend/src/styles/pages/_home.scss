@@ -1,31 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Yesteryear&display=swap');
+
 /* ===================
   Home Section Styles
   =================== */
 
 .home {
-  background-color: #f4f4f4; /* Example background */
-  padding: 50px 0; /* Add padding to top and bottom */
+  background-color: #f4f4f4;
+  padding: 50px 0;
   display: flex;
   justify-content: center;
   align-items: center;
 
   .hero-content {
     text-align: center;
-    max-width: 800px;
+    max-width: 900px;
     width: 100%;
-    
+
     h1 {
       font-size: 2.5rem;
       line-height: 1.4;
       font-weight: 700;
       margin-bottom: 20px;
-      
+
       span {
-        color: #3d5a98; /* Highlight color */
+        color: #3d5a98;
         font-weight: 600;
+        font-size: 4rem;
+        font-family: 'Yesteryear', cursive;
+        font-weight: 400;
+        font-style: normal;
       }
     }
-    
+
     p {
       font-size: 1.2rem;
       color: #666;
@@ -46,11 +52,11 @@
         cursor: pointer;
         transition: background-color 0.3s ease;
       }
-      
+
       .btn-primary {
         background-color: #3d5a98;
         color: #fff;
-        
+
         &:hover {
           background-color: #2a457a;
         }
@@ -98,6 +104,7 @@
         opacity: 0;
         transform: translateY(30px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
