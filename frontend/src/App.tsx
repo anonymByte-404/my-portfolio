@@ -1,12 +1,11 @@
 import React from 'react'
-import { Header, Home, About } from './ui'
+import { Components } from './gui/index'
+import './styles/css/index.min.css'
 
-const App: React.FC = () => {
+const App: React.FC<{}> = () => {
   return (
     <>
-      <Header />
-      <Home />
-      <About />
+      <Components.Header />
     </>
   )
 }
