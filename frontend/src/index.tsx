@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import './styles/main.css'
+import reportWebVitals from './reportWebVitals'
 
-const root = ReactDOM.createRoot(
+const root: ReactDOM.Root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 )
 root.render(
@@ -12,3 +12,4 @@ root.render(
   </React.StrictMode>
 )
 
+reportWebVitals()
