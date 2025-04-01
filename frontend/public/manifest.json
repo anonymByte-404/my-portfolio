@@ -1,15 +1,12 @@
 {
-  "short_name": "Portfolio",
-  "name": "Aeron's Portfolio",
-  "icons": [
-    {
-      "src": "logo.svg",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    }
-  ],
-  "start_url": ".",
+  "short_name": "Aeron Portfolio",
+  "name": "Aeron Asug - Developer Portfolio",
+  "icons": [],
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#121212",
+  "orientation": "portrait-primary",
+  "description": "Explore Aeron Asug's projects, skills, and experience in software development.",
+  "lang": "en"
 }
