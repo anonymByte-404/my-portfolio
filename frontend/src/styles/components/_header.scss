@@ -1,97 +1,114 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Raleway:wght@400;600&display=swap');
 
-$primary-color: #121212;
-$secondary-color: #1e1e1e;
-$accent-color: #ff6f61;
-$text-color: #ffffff;
-$hover-color: #ffb74d;
-$transition-duration: 0.3s;
-
 .header {
-  background: $primary-color;
-  color: $text-color;
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 90%;
+  max-width: 1200px;
   padding: 1rem 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  background: rgba(20, 20, 20, 0.5);
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  transition: top $transition-duration ease, background $transition-duration ease;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
   &.hidden {
-    top: -100px;
+    opacity: 0;
+    transform: translate(-50%, -100%);
   }
 
   &.visible {
-    top: 0;
+    opacity: 1;
+    transform: translate(-50%, 0);
   }
 
-  .logo {
-    font-size: 2rem;
-    font-family: 'Dancing Script', cursive;
-    font-weight: 600;
-    color: $accent-color;
+  .header-logo {
+    font: normal 600 2.2rem/1 'Dancing Script', cursive;
+    color: white;
     cursor: pointer;
-    transition: color $transition-duration ease, transform $transition-duration ease;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
 
     &:hover {
-      color: $hover-color;
-      transform: scale(1.05);
+      transform: scale(1.1);
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
     }
   }
 
-  nav {
-    .nav-links {
-      display: flex;
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0.6rem 1.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease-in-out;
+
+    li {
       list-style: none;
-      gap: 2rem;
-      padding: 0;
 
-      li {
-        a {
-          color: $text-color;
-          text-decoration: none;
-          font-size: 1.1rem;
-          position: relative;
-          transition: color $transition-duration ease;
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        border-radius: 14px;
+        transition: all 0.3s ease-in-out;
 
-          &:hover {
-            color: $hover-color;
-
-            &::after {
-              content: '';
-              display: block;
-              width: 100%;
-              height: 2px;
-              background: $hover-color;
-              position: absolute;
-              left: 0;
-              bottom: -4px;
-              transition: width $transition-duration ease;
-            }
-          }
+        &:hover {
+          background: rgba(255, 255, 255, 0.15);
+          transform: scale(1.1);
+          box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
         }
       }
     }
   }
 
-  .social-links {
-    a {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: $text-color;
+  .header-social-links {
+    display: flex;
+    align-items: center;
+
+    .social-link {
+      color: white;
       text-decoration: none;
-      font-size: 1.1rem;
-      transition: color $transition-duration ease;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 14px;
+      transition: all 0.3s ease-in-out;
 
       &:hover {
-        color: $hover-color;
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.1);
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    padding: 1rem;
+    gap: 1rem;
+
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      padding: 1rem 2rem;
+    }
+
+    .header-social-links {
+      margin-top: 0.5rem;
     }
   }
 }
