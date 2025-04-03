@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { JSX } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Components, Pages } from './gui/index'
-// import './styles/css/index.min.css'
+import './styles/css/index.min.css'
 
 const App: React.FC<{}> = () => {
   const routes: {
@@ -15,6 +15,25 @@ const App: React.FC<{}> = () => {
       { path: '/blog', label: 'Blog', component: Pages.Blog }
     ]
 
+  const socialLinks: {
+    icon: JSX.Element
+    link: string
+    label: string
+    size: number
+  }[] = [
+      { icon: <Components.Icons.Github />, link: 'https://github.com/anonymByte-404', label: 'GitHub', size: 30 }
+    ]
+
+  const email: {
+    icon: React.ReactNode
+    address: string
+    size?: number
+  } = {
+    icon: <Components.Icons.Mail />,
+    address: 'fake@email.com',
+    size: 30
+  }
+
   return (
     <>
       <Components.Header links={routes} />
@@ -23,6 +42,7 @@ const App: React.FC<{}> = () => {
           <Route key={path} path={path} element={<Component />} />
         ))}
       </Routes>
+      <Components.Footer socialLinks={socialLinks} email={email} />
     </>
   )
 }
