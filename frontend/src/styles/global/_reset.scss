@@ -14,13 +14,69 @@ html {
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #121212;
+  background: radial-gradient(circle at top, #242425, #1a1a1b);
   color: #ffffff;
   line-height: 1.6;
   overflow-x: hidden;
+  height: 100vh;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, rgba(90, 106, 122, 0.3) 70%, transparent 100%);
+    filter: blur(150px);
+    z-index: -1;
+    animation: moveCircles 10s ease-in-out infinite;
+  }
+
+  &::before {
+    top: 10%;
+    left: 15%;
+    animation-delay: 0s;
+  }
+
+  &::after {
+    bottom: 10%;
+    right: 15%;
+    animation-delay: 5s;
+  }
 }
 
 section {
+  position: relative;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes moveCircles {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  20% {
+    transform: translate(40px, -20px);
+  }
+
+  40% {
+    transform: translate(-20px, 30px);
+  }
+
+  60% {
+    transform: translate(10px, -15px);
+  }
+
+  80% {
+    transform: translate(-5px, 10px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
 }
