@@ -36,7 +36,7 @@ const App: React.FC<{}> = () => {
 
   return (
     <>
-      <Components.Header links={routes} />
+      <Components.Header links={routes} icon={<Components.Icons.Download size={20} />} />
       <Routes>
         {routes.map(({ path, component: Component }) => (
           <Route key={path} path={path} element={<Component />} />
