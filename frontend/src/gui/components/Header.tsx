@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom'
 
 interface HeaderProps {
   links: { path: string; label: string }[]
+  icon: React.ReactNode
 }
 
-const Header: React.FC<HeaderProps> = ({ links }) => {
+const Header: React.FC<HeaderProps> = ({ links, icon }) => {
   const [isVisible, setIsVisible] = useState(true)
   let lastScrollY: number = window.pageYOffset
 
@@ -32,14 +33,15 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
           ))}
         </ul>
       </nav>
-      <div className='header-social-links'>
+      <div className='header-resume-links'>
         <a
-          href='https://github.com/anonymByte-404'
+          href='#'
           target='_blank'
           rel='noopener noreferrer'
-          className='social-link'
+          className='resume-link'
         >
-          <span className='social-link-text'>GitHub</span>
+          {icon}
+          <span className='resume-link-text'>Resume</span>
         </a>
       </div>
     </header>
