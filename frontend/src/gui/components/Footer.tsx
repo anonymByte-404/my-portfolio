@@ -19,8 +19,8 @@ interface FooterProps {
 }
 
 const Footer: React.FC<FooterProps> = ({ socialLinks, email }) => {
-  const generalLinks = ['Home', 'About', 'Projects', 'Blog']
-  const techLinks = ['TypeScript', 'React', 'SCSS']
+  const generalLinks: string[] = ['Home', 'About', 'Projects', 'Blog']
+  const techLinks: string[] = ['TypeScript', 'React', 'SCSS']
 
   return (
     <footer className='footer'>
