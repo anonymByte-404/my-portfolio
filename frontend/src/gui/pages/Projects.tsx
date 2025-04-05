@@ -1,22 +1,21 @@
 import React from 'react'
+import projects from './data/projects.json'
 
-const projects = [
-  {
-    title: 'Placeholder Project',
-    description: 'This is a placeholder project description. More details will be added soon.',
-    tech: ['Placeholder Tech 1', 'Placeholder Tech 2'],
-    image: '/images/placeholder.png',
-    live: '',
-    source: '',
-  },
-]
+interface Project {
+  title: string
+  description: string
+  tech: string[]
+  image: string
+  live: string
+  source: string
+}
 
-const Projects: React.FC = () => {
+const Projects: React.FC<{}> = () => {
   return (
     <section className='projects-section'>
       <h1 className='projects-header'>Projects</h1>
       <div className='projects-list'>
-        {projects.map((project, index) => (
+        {(projects as Project[]).map((project, index) => (
           <div key={index} className='project-row'>
             <div className='project-image-wrapper'>
               <img
@@ -33,15 +32,21 @@ const Projects: React.FC = () => {
               <p>{project.description}</p>
               <div className='tech-stack'>
                 {project.tech.map((tech, i) => (
-                  <span key={i} className='tech-badge'>{tech}</span>
+                  <span key={i} className='tech-badge'>
+                    {tech}
+                  </span>
                 ))}
               </div>
               <div className='project-links'>
                 {project.live && (
-                  <a href={project.live} target='_blank' rel='noopener noreferrer'>Live Demo</a>
+                  <a href={project.live} target='_blank' rel='noopener noreferrer'>
+                    Live Demo
+                  </a>
                 )}
                 {project.source && (
-                  <a href={project.source} target='_blank' rel='noopener noreferrer'>Source Code</a>
+                  <a href={project.source} target='_blank' rel='noopener noreferrer'>
+                    Source Code
+                  </a>
                 )}
               </div>
             </div>
