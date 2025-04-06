@@ -53,9 +53,10 @@
 
     li {
       list-style: none;
+      position: relative;
 
       a {
-        color: white;
+        color: rgb(199, 199, 199);
         font-family: 'Raleway', sans-serif;
         font-weight: 600;
         text-decoration: none;
@@ -65,9 +66,25 @@
         transition: all 0.3s ease;
 
         &:hover {
+          color: rgb(255, 255, 255);
           background: rgba(255, 255, 255, 0.15);
           transform: scale(1.1);
           box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        &.active {
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: 138%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgb(255, 255, 255);
+            border-radius: 2px;
+          }
         }
       }
     }
