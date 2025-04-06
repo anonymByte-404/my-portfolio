@@ -21,7 +21,7 @@ const App: React.FC<{}> = () => {
     label: string
     size: number
   }[] = [
-      { icon: <Components.Icons.Github />, link: 'https://github.com/anonymByte-404', label: 'GitHub', size: 30 }
+      { icon: <Components.Icons._Github_ />, link: 'https://github.com/anonymByte-404', label: 'GitHub', size: 30 }
     ]
 
   const email: {
@@ -29,20 +29,30 @@ const App: React.FC<{}> = () => {
     address: string
     size?: number
   } = {
-    icon: <Components.Icons.Mail />,
+    icon: <Components.Icons._Mail_ />,
     address: 'fake@email.com',
     size: 30
   }
 
+  const techLinks: {
+    name: string
+    href: string
+    icon: JSX.Element
+  }[] = [
+      { name: 'TypeScript', href: 'https://www.typescriptlang.org/', icon: <Components.Icons._TypeScript_ size={20} /> },
+      { name: 'React', href: 'https://react.dev/', icon: <Components.Icons._React_ size={20} /> },
+      { name: 'SCSS', href: 'https://sass-lang.com/', icon: <Components.Icons._Sass_ size={20} /> },
+    ]
+
   return (
     <>
-      <Components.Header links={routes} icon={<Components.Icons.Download size={20} />} />
+      <Components.Header links={routes} icon={<Components.Icons._Download_ size={20} />} />
       <Routes>
         {routes.map(({ path, component: Component }) => (
           <Route key={path} path={path} element={<Component />} />
         ))}
       </Routes>
-      <Components.Footer socialLinks={socialLinks} email={email} />
+      <Components.Footer socialLinks={socialLinks} email={email} techLinks={techLinks} />
     </>
   )
 }
