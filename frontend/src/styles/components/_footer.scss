@@ -71,9 +71,8 @@
     h3 {
       font-size: 1.3rem;
       font-weight: 600;
-      color: #ffcc00;
-      margin-bottom: 12px;
-      border-bottom: 2px solid #ffcc00;
+      color: #ffeeac;
+      margin-bottom: 10px;
       padding-bottom: 6px;
     }
 
@@ -83,17 +82,52 @@
       padding: 0;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 15px;
 
       .footer-link-item,
       .footer-tech-item {
         font-size: 0.95rem;
         transition: color 0.3s ease;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
 
         &:hover {
-          color: #ffcc00;
+          color: #f8efcc;
           text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+        }
+      }
+
+      .footer-link {
+        text-decoration: none;
+        color: #ffffff;
+        transition: color 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+          color: #f8efcc;
+          transform: scale(1.05);
+        }
+      }
+
+      .tech-link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+          color: #f8efcc;
+          transform: scale(1.05);
+        }
+
+        svg {
+          fill: currentColor;
+          width: 24px;
+          height: 24px;
         }
       }
     }
