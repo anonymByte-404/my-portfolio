@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 interface HeaderProps {
   links: { path: string; label: string }[]
@@ -7,7 +7,7 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ links, icon }) => {
-  const [isVisible, setIsVisible] = useState(true)
+  const [isVisible, setIsVisible] = useState(true) as [boolean, React.Dispatch<React.SetStateAction<boolean>>]
   let lastScrollY: number = window.pageYOffset
 
   const handleScroll = (): void => {
@@ -28,7 +28,12 @@ const Header: React.FC<HeaderProps> = ({ links, icon }) => {
         <ul className='nav-links'>
           {links.map((link) => (
             <li key={link.path} className='nav-link-item'>
-              <Link to={link.path} className='nav-link'>{link.label}</Link>
+              <NavLink
+                to={link.path}
+                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+              >
+                {link.label}
+              </NavLink>
             </li>
           ))}
         </ul>
