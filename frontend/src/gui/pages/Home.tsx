@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Components } from '..'
 
 const Home: React.FC<{}> = () => {
   const [copied, setCopied] = useState(false) as [boolean, React.Dispatch<React.SetStateAction<boolean>>]
@@ -65,7 +66,11 @@ const Home: React.FC<{}> = () => {
             aria-label='Copy email to clipboard'
             title='Click to copy email'
           >
-            {copied ? 'Copied!' : 'fake@email.com'}
+            {copied ? 'Copied!' : (
+              <>
+                <Components.Icons._Copy_ size={16} className={copied ? 'copied-icon' : ''} /> fake@email.com
+              </>
+            )}
           </button>
         </div>
       </div>
