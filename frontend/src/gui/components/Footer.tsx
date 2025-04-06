@@ -13,14 +13,29 @@ interface EmailInfo {
   size?: number
 }
 
+interface TechLink {
+  name: string
+  icon: React.ReactNode
+  href: string
+}
+
 interface FooterProps {
   socialLinks: SocialLink[]
   email: EmailInfo
+  techLinks: TechLink[]
 }
 
-const Footer: React.FC<FooterProps> = ({ socialLinks, email }) => {
-  const generalLinks: string[] = ['Home', 'About', 'Projects', 'Blog']
-  const techLinks: string[] = ['TypeScript', 'React', 'SCSS']
+
+const Footer: React.FC<FooterProps> = ({ socialLinks, email, techLinks }) => {
+  const generalLinks: {
+    name: string
+    href: string
+  }[] = [
+      { name: 'Home', href: '/' },
+      { name: 'About', href: '/about' },
+      { name: 'Projects', href: '/projects' },
+      { name: 'Blog', href: '/blog' }
+    ]
 
   return (
     <footer className='footer'>
@@ -49,7 +64,9 @@ const Footer: React.FC<FooterProps> = ({ socialLinks, email }) => {
           <h3 className='footer-links-title'>General</h3>
           <ul className='footer-links-list'>
             {generalLinks.map((link, index) => (
-              <li key={index} className='footer-link-item'>{link}</li>
+              <li key={index} className='footer-link-item'>
+                <a href={link.href} className='footer-link'>{link.name}</a>
+              </li>
             ))}
           </ul>
         </div>
@@ -57,7 +74,17 @@ const Footer: React.FC<FooterProps> = ({ socialLinks, email }) => {
           <h3 className='footer-tech-title'>Built with</h3>
           <ul className='footer-tech-list'>
             {techLinks.map((link, index) => (
-              <li key={index} className='footer-tech-item'>{link}</li>
+              <li key={index} className='footer-tech-item'>
+                <a
+                  href={link.href}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='tech-link'
+                >
+                  {React.cloneElement(link.icon as React.ReactElement<any>)}
+                  <span className='tech-link-name'>{link.name}</span>
+                </a>
+              </li>
             ))}
           </ul>
         </div>
