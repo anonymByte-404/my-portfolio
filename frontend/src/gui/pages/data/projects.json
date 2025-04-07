@@ -1,13 +1,141 @@
 [
   {
-    "title": "Placeholder Project",
-    "description": "This is a placeholder project description. More details will be added soon.",
+    "title": "base-string-converter",
+    "description": "A versatile utility designed to handle conversions between various base encodings, including Base64, Base32, Base58, and more. Available as both a command-line tool and a web application, it allows users to seamlessly encode, decode, or transform data between different base formats with ease and efficiency.",
     "tech": [
-      "Placeholder Tech 1",
-      "Placeholder Tech 2"
+      "TypeScript"
     ],
-    "image": "/images/placeholder.png",
+    "image": "/data/assets/images/base-string-converter-project/repo-preview.png",
     "live": "",
-    "source": ""
+    "source": "https://github.com/anonymByte-404/base-string-converter",
+    "date": "2025-01-04",
+    "dateFinished": "",
+    "tags": [
+      "cli",
+      "encoding",
+      "decoding",
+      "string-conversion",
+      "web-tool",
+      "command-line-tool",
+      "text-processing",
+      "data-conversion",
+      "cli-tool",
+      "case-conversion"
+    ]
+  },
+  {
+    "title": "promptrix",
+    "description": "Promptrix is a TypeScript-first CLI prompt engine for building interactive terminal applications. It offers type-safe prompts, validation, and composable workflows with a minimal API. Perfect for tools needing user input with zero dependencies.",
+    "tech": [
+      "TypeScript"
+    ],
+    "image": "none",
+    "live": "",
+    "source": "https://github.com/anonymByte-404/promptrix",
+    "date": "2025-03-26",
+    "dateFinished": "",
+    "tags": [
+      "developer-experience",
+      "command-line-interface",
+      "interactive-prompt",
+      "typescript-cli-tool",
+      "terminal-ux"
+    ]
+  },
+  {
+    "title": "system-maintenance-optimizer",
+    "description": "This repository contains scripts to keep your system running smoothly. It includes tools for cleaning up unnecessary files, monitoring performance (CPU, memory, disk space), automating updates, managing temperature, and more. A simple, automated way to maintain system efficiency without manual intervention.",
+    "tech": [
+      "Python",
+      "Shell",
+      "Batchfile"
+    ],
+    "image": "none",
+    "live": "",
+    "source": "https://github.com/anonymByte-404/system-maintenance-optimizer",
+    "date": "2025-02-22",
+    "dateFinished": "",
+    "tags": [
+      "automation",
+      "performance-monitoring",
+      "system-maintenance",
+      "system-optimization",
+      "cleanup-scripts"
+    ]
+  },
+  {
+    "title": "git-scheduler",
+    "description": "Git Scheduler is a Python tool that automates Git commits and pushes at scheduled times. With commit history tracking, real-time scheduling, and selective file commits, it streamlines your workflow—perfect for developers, teams, and automation enthusiasts.",
+    "tech": [
+      "Python"
+    ],
+    "image": "none",
+    "live": "",
+    "source": "https://github.com/anonymByte-404/git-scheduler",
+    "date": "2025-02-24",
+    "dateFinished": "",
+    "tags": [
+      "python",
+      "git",
+      "productivity",
+      "automation",
+      "scheduler",
+      "task-scheduler",
+      "git-commit",
+      "cli-tool",
+      "git-push",
+      "git-automation"
+    ]
+  },
+  {
+    "title": "complex-calc",
+    "description": "A C++ application for solving complex mathematical questions and performing matrix operations. Supports linear, quadratic, cubic, quartic, quintic, sextic, septic, and octic equations, as well as matrix addition and subtraction.",
+    "tech": [
+      "C",
+      "C++",
+      "CMake",
+      "Dockerfile",
+      "Shell"
+    ],
+    "image": "none",
+    "live": "",
+    "source": "https://github.com/anonymByte-404/complex-calc",
+    "date": "2025-02-26",
+    "dateFinished": "",
+    "tags": [
+      "cplusplus",
+      "cross-platform",
+      "linear-algebra",
+      "mathematics",
+      "command-line-tool",
+      "numerical-methods",
+      "equation-solver",
+      "newton-rahpson",
+      "matrix-operations"
+    ]
+  },
+  {
+    "title": "pass-shield",
+    "description": "PassShield is a secure password manager that allows users to store, retrieve, and manage passwords locally. It features AES-256 encryption for data protection, password generation, and a command-line interface for easy access. Built with Ruby, PassShield is stable and ready for use.",
+    "tech": [
+      "Ruby"
+    ],
+    "image": "none",
+    "live": "",
+    "source": "https://github.com/anonymByte-404/pass-shield",
+    "date": "2025-03-22",
+    "dateFinished": "",
+    "tags": [
+      "ruby",
+      "open-source",
+      "security",
+      "encryption",
+      "local-storage",
+      "data-protection",
+      "command-line-interface",
+      "password-management",
+      "password-generation",
+      "aes-256-encryption"
+    ]
   }
 ]
