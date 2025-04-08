@@ -14,21 +14,27 @@ interface Project {
   tags?: string[]
 }
 
-const Projects: React.FC = () => {
+const Projects: React.FC<{}> = () => {
   const [visibleProjects, setVisibleProjects] = useState<boolean[]>(new Array(projects.length).fill(false))
-  const [fadeVisible, setFadeVisible] = useState(true)
-  const containerRef = useRef<HTMLDivElement>(null)
+  const [fadeVisible, setFadeVisible] = useState(true) as [boolean, React.Dispatch<React.SetStateAction<boolean>>]
+  const [expandedProject, setExpandedProject] = useState<number | null>(null)
+  const containerRef: React.RefObject<HTMLDivElement | null> = useRef<HTMLDivElement>(null)
 
   const sortedProjects: Project[] = (projects as Project[]).sort((a, b) => {
     return Date.parse(b.date || '') - Date.parse(a.date || '')
   })
 
   const formatDate = (dateString?: string): string => {
-    const date = dateString ? new Date(dateString) : new Date()
-    const year = date.getFullYear().toString().slice(-2)
-    const month = String(date.getMonth() + 1).padStart(2, '0')
-    const day = String(date.getDate()).padStart(2, '0')
+    const date: Date = dateString ? new Date(dateString) : new Date()
+    const year: string = date.getFullYear().toString().slice(-2)
+    const month: string = String(date.getMonth() + 1).padStart(2, '0')
+    const day: string = String(date.getDate()).padStart(2, '0')
     return `${year}-${month}-${day}`
+  }
+
+  const truncateDescription = (description: string, maxLength: number = 150): string => {
+    if (description.length <= maxLength) return description
+    return description.slice(0, maxLength) + '...'
   }
 
   useEffect(() => {
@@ -84,6 +90,10 @@ const Projects: React.FC = () => {
     }
   }, [])
 
+  const toggleDescription = (index: number) => {
+    setExpandedProject(prev => (prev === index ? null : index))
+  }
+
   return (
     <section className='projects-section'>
       <h1 className='projects-header'>Projects</h1>
@@ -112,7 +122,9 @@ const Projects: React.FC = () => {
                 </div>
                 <div className='project-details'>
                   <h2>{project.title}</h2>
-                  <p>{project.description}</p>
+                  <p onClick={() => toggleDescription(index)} style={{ cursor: 'pointer' }}>
+                    {expandedProject === index ? project.description : truncateDescription(project.description)}
+                  </p>
                   <div className='tech-stack'>
                     {project.tech.sort().map((tech, i) => (
                       <span key={i} className='tech-badge'>{tech}</span>
@@ -141,4 +153,4 @@ const Projects: React.FC = () => {
   )
 }
 
-export default Projects 
+export default Projects
