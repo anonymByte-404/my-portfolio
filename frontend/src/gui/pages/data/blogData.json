@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "title": "Placeholder Title",
+    "summary": "This is a placeholder summary for the blog post. It gives a brief overview of the content that will be included in the actual post.",
+    "date": "YY-MM-DD",
+    "tags": [
+      "Placeholder",
+      "Example",
+      "Demo"
+    ]
+  }
+]
